@@ -55,7 +55,7 @@
 	[scoreReporter reportScoreWithCompletionHandler: ^(NSError *error) 
 	 {
 		 NSLog(@"score completed");
-		 [self fireEvent:@"score_submitted"];
+		 [self fireEvent:@"scoreSubmitted"];
 		 //[self callDelegateOnMainThread: @selector(scoreReported:) withArg: NULL error: error];
 		 [self reloadHighScoresForCategory];
 	 }];

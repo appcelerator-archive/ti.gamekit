@@ -162,7 +162,7 @@ BOOL isGameCenterAPIAvailable()
 		{
 			/*[self showAlertWithTitle: @"Achievement Earned!"
 							 message: [NSString stringWithFormat: @"Great job!  You earned an achievement: \"%@\"", NSLocalizedString(ach.identifier, NULL)]];*/
-			[self fireEvent:@"achievement_earned"];
+			[self fireEvent:@"achievementEarned"];
 		}
 		else
 		{
@@ -170,7 +170,7 @@ BOOL isGameCenterAPIAvailable()
 			{
 				/*[self showAlertWithTitle: @"Achievement Progress!"
 								 message: [NSString stringWithFormat: @"Great job!  You're %.0f\%% of the way to: \"%@\"",ach.percentComplete, NSLocalizedString(ach.identifier, NULL)]];*/
-				[self fireEvent:@"achievement_progress"];
+				[self fireEvent:@"achievementProgress"];
 			}
 		}
 	}
@@ -178,7 +178,7 @@ BOOL isGameCenterAPIAvailable()
 	{
 		/*[self showAlertWithTitle: @"Achievement Submission Failed!"
 						 message: [NSString stringWithFormat: @"Reason: %@", [error localizedDescription]]];*/
-		[self fireEvent:@"achievement_failed"];
+		[self fireEvent:@"achievementFailed"];
 	}
 }
 
