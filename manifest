@@ -10,7 +10,7 @@ copyright: Copyright (c) 2010-2011 by Appcelerator, Inc.
 
 
 # these should not be edited
-name: gamkekit
+name: gamekit
 moduleid: ti.gamekit
 guid: 634adffb-5b75-45a8-ab28-a835219adbf4
 platform: iphone
