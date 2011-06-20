@@ -79,3 +79,8 @@ Example:<br/>
 See the app.js file in the example directory
 
 </font>
+
+
+## License
+
+Copyright(c) 2010-2011 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.
