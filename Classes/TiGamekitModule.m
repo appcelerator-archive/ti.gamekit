@@ -68,6 +68,7 @@ BOOL isGameCenterAPIAvailable()
 -(void)dealloc
 {
 	[leaderBoardProxy release];
+	
 	// release any resources that have been retained by the module
 	[super dealloc];
 }
@@ -83,7 +84,7 @@ BOOL isGameCenterAPIAvailable()
 
 #pragma mark Listener Notifications
 
--(void)_listenerAdded:(NSString *)type count:(int)count
+/*-(void)_listenerAdded:(NSString *)type count:(int)count
 {
 	if (count == 1 && [type isEqualToString:@"my_event"])
 	{
@@ -100,7 +101,7 @@ BOOL isGameCenterAPIAvailable()
 		// been removed, we can optionally clean up any resources
 		// since no body is listening at this point for that event
 	}
-}
+} */
 
 - (BOOL)isPlayerAuthenticated
 {

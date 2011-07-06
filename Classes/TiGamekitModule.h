@@ -15,8 +15,6 @@ BOOL isGameCenterAvailable();
 	TiGamekitLeaderBoardProxy *leaderBoardProxy;
 }
 
--(TiGamekitLeaderBoardProxy *) initLeaderBoard:(id)args;
-
 @property (nonatomic, retain) TiGamekitLeaderBoardProxy *leaderBoardProxy;
 
 // currentPlayerID is the value of the playerID last time GameKit authenticated.
