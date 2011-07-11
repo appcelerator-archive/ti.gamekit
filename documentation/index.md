@@ -90,6 +90,23 @@ This stops a voice chat session
 ### disconnectPeer()
 This will end a game session with a connected peer
 
+## Events
+### connected
+This fires once connected to another peer
+Returns the peerID
+
+###disconnected
+Fires when the disconnectPeer() method is called
+
+###dataRecieved
+This fires when data is recieved from a connected peer. This is a string which means you can send plain text or JSON.
+the variable 'message' is what the data is in.
+
+###chatstarted
+Fires when a voice chat is started
+
+###chatended
+Fires when a voice chat is stopped
 
 ## Usage
 
