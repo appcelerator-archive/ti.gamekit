@@ -213,6 +213,7 @@
 	gameState = ConnectionStateDisconnected;
 	[otherPeerId release];
 	otherPeerId = nil;
+	[self fireEvent:@"disconnected"];
 }
 
 void EnableSpeakerPhone ()
