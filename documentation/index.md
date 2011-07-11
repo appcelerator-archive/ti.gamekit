@@ -74,6 +74,23 @@ Example:<br/>
 	gk_ach.submitAchievement(identifier,perc);<br/>
 <br/>
 
+### createPeer()
+This method is what starts the Peer to Peer UI that searches for other users. Once 2 devices are connected, a connected event will fire. At that point game releated data can be
+exchanged. Including plain text or JSON.
+
+### sendGameData(data)
+This method sends text or JSON through to another connected client. This can be used for text chats or game data.
+
+### startVoice()
+This will start voice chat with the connected peer.
+
+### stopVoice()
+This stops a voice chat session
+
+### disconnectPeer()
+This will end a game session with a connected peer
+
+
 ## Usage
 
 See the app.js file in the example directory

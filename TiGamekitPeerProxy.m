@@ -62,9 +62,8 @@
 
 - (void)peerPickerController:(GKPeerPickerController *)picker didConnectPeer:(NSString *)peerID toSession:(GKSession *)session { 
 	// Remember the current peer.
-	[self setupVoice];
 	 self.otherPeerId = peerID;  // copy
-	
+	[self setupVoice];
 	// Make sure we have a reference to the game session and it is set up
 	self.moduleSession = session; // retain
 	self.moduleSession.delegate = self; 
@@ -77,12 +76,10 @@
 	
 	gameState = ConnectionStateConnected;
 	
-	NSError *error; 
-	if (![[GKVoiceChatService defaultVoiceChatService] startVoiceChatWithParticipantID:peerID error:&error]) {
-		//NSLog(@"%@",[error localizedDescription]);
-	}
 	//}
-	[self fireEvent:@"connected"];
+	NSMutableDictionary *event = [NSMutableDictionary dictionary];
+	[event setValue:peerID forKey:@"peerId"];
+	[self fireEvent:@"connected" withObject:event];
 		// Done with the Peer Picker so dismiss it.
 	[picker dismiss];
 	picker.delegate = nil;
@@ -170,10 +167,10 @@
 			//NSLog(@"data packet: %@",incomingPacket);
 			NSDictionary* event = [NSDictionary dictionaryWithObjectsAndKeys:newStr,@"message",nil];
 			[self fireEvent:@"dataRecieved" withObject:event];
-			[newStr release];
-			newStr = nil;
-			[event release];
-			event = nil;
+			//[newStr release];
+			//newStr = nil;
+			//[event release];
+			//event = nil;
         }
     }
 }
@@ -201,22 +198,21 @@
 
 -(void) disconnectCurrentCall
 {	
-    
     if (gameState != ConnectionStateDisconnected) {
         if(gameState == ConnectionStateConnected) {		
             [[GKVoiceChatService defaultVoiceChatService] stopVoiceChatWithParticipantID:otherPeerId];
         }
-        // Don't leave a peer hangin'
-        if (gameState == ConnectionStateConnecting) {
-            [moduleSession cancelConnectToPeer:otherPeerId];
-        }
-        [moduleSession disconnectFromAllPeers];
-        moduleSession.available = YES;
-        gameState = ConnectionStateDisconnected;
-		[otherPeerId release];
-        otherPeerId = nil;
+		[self fireEvent:@"chatended"];
     }
-	
+}
+
+-(void)disconnectPeer:(id)args
+{
+	[moduleSession disconnectFromAllPeers];
+	moduleSession.available = YES;
+	gameState = ConnectionStateDisconnected;
+	[otherPeerId release];
+	otherPeerId = nil;
 }
 
 void EnableSpeakerPhone ()
@@ -285,6 +281,22 @@ void InterruptionListenerCallback (void *inUserData, UInt32 interruptionState)
 	//[self fireEvent:@"voicestarted"];
 }
 
+-(void)startVoice:(id)args
+{
+	NSError *error; 
+	if (![[GKVoiceChatService defaultVoiceChatService] startVoiceChatWithParticipantID:[self otherPeerId] error:&error]) {
+		NSLog(@"%@",[error localizedDescription]);
+	} else {
+		[self fireEvent:@"chatstarted"];
+	}
+
+}
+
+-(void)stopVoice:(id)args
+{
+	[self disconnectCurrentCall];
+}
+
 // GKVoiceChatService Client Method. For convenience, we are using the same ID for the GKSession and GKVoiceChatService.
 - (NSString *)participantID
 {
@@ -332,6 +344,5 @@ void InterruptionListenerCallback (void *inUserData, UInt32 interruptionState)
 {
     return gameState == ConnectionStateConnected;
 }
-
 
 @end

@@ -43,5 +43,6 @@ typedef enum {
 -(void)setupVoice;
 -(void)disconnectCurrentCall;
 -(BOOL)isReadyToStart;
+-(void)disconnectPeer;
 
 @end
