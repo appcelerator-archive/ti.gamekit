@@ -79,6 +79,7 @@
 	//}
 	NSMutableDictionary *event = [NSMutableDictionary dictionary];
 	[event setValue:peerID forKey:@"peerId"];
+	[event setValue:[session displayNameForPeer:peerID] forKey:@"peerName"];
 	[self fireEvent:@"connected" withObject:event];
 		// Done with the Peer Picker so dismiss it.
 	[picker dismiss];
