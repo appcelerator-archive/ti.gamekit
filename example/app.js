@@ -32,17 +32,16 @@ window.open();
 var gamekit = require('ti.gamekit');
 Ti.API.info("module is => " + gamekit);
 
-label.text = gamekit.example();
-
-Ti.API.info("module exampleProp is => " + gamekit.exampleProp);
-gamekit.exampleProp = "This is a test value";
-
 gamekit.addEventListener('loggedin',function(){
-	//alert(gamekit.currentPlayerID);
+	
 	var gk = gamekit.createLeaderBoard('com.custeng.leaders');
 	var gk_ach = gamekit.createAchievements();
 	var gk_peer = gamekit.createPeer();
-	//gk_peer.setupVoice();
+    //this needs to be set for the peer to peer picker to find other peers
+	gk_peer.sessionName = "myapp";
+	
+	//alert(gk_peer.sessionName);
+	
 	lb_btn.enabled = true;
 	
 	var isConnected = false;
@@ -86,10 +85,10 @@ gamekit.addEventListener('loggedin',function(){
 	});
 	
 	gk_peer.addEventListener('connected',function(e){
-		//alert('connected');
+		
 		if(!isConnected){
-			
-			var data = 'Connected with: ' + e.peerId;
+			alert('connected to: ' + e.peerName);
+			var data = 'Howdy Partner :)';
 			gk_peer.sendGameData(data);
 			
 			window.add(chat_btn);
@@ -111,9 +110,7 @@ gamekit.addEventListener('loggedin',function(){
 			isConnected = false;
 			gk_peer.disconnectPeer();
 		}
-		
-		
-		
+
 	});
 	
 	gk_peer.addEventListener('disconnected',function(){

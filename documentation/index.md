@@ -74,9 +74,14 @@ Example:<br/>
 	gk_ach.submitAchievement(identifier,perc);<br/>
 <br/>
 
+## Peer API
+
 ### createPeer()
 This method is what starts the Peer to Peer UI that searches for other users. Once 2 devices are connected, a connected event will fire. At that point game releated data can be
 exchanged. Including plain text or JSON.
+
+### sessionName
+This is a property (string) that has to be set in order for the peer picker to properly detect other peers for your application.
 
 ### sendGameData(data)
 This method sends text or JSON through to another connected client. This can be used for text chats or game data.
@@ -90,17 +95,17 @@ This stops a voice chat session
 ### disconnectPeer()
 This will end a game session with a connected peer
 
-## Events
-### connected
+## Peer Events
+### connected(object event)
 This fires once connected to another peer
-Returns the peerID
+Returns the peerID and peerName both of which are strings.
 
 ###disconnected
 Fires when the disconnectPeer() method is called
 
-###dataRecieved
+###dataRecieved(string data)
 This fires when data is recieved from a connected peer. This is a string which means you can send plain text or JSON.
-the variable 'message' is what the data is in.
+the variable 'message' is what the data is in and its a string.
 
 ###chatstarted
 Fires when a voice chat is started

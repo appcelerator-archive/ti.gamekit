@@ -26,16 +26,16 @@
 		24DD6CFA1134B3F500162E58 /* TiGamekitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* TiGamekitModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* TiGamekitModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiGamekitModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* TiGamekitModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiGamekitModuleAssets.m */; };
-		7B8261DF139D69AC00DB81D3 /* TiGamekitPeerProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B8261DD139D69AC00DB81D3 /* TiGamekitPeerProxy.h */; };
-		7B8261E0139D69AC00DB81D3 /* TiGamekitPeerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8261DE139D69AC00DB81D3 /* TiGamekitPeerProxy.m */; };
-		7B9A8380138D9F350048C116 /* TiGamekitAchievementsProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9A837E138D9F350048C116 /* TiGamekitAchievementsProxy.h */; };
-		7B9A8381138D9F350048C116 /* TiGamekitAchievementsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9A837F138D9F350048C116 /* TiGamekitAchievementsProxy.m */; };
+		7B71659B13CDF030007C7B4C /* TiGamekitAchievementsProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B71659513CDF030007C7B4C /* TiGamekitAchievementsProxy.h */; };
+		7B71659C13CDF030007C7B4C /* TiGamekitAchievementsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B71659613CDF030007C7B4C /* TiGamekitAchievementsProxy.m */; };
+		7B71659D13CDF030007C7B4C /* TiGamekitLeaderBoardProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B71659713CDF030007C7B4C /* TiGamekitLeaderBoardProxy.h */; };
+		7B71659E13CDF030007C7B4C /* TiGamekitLeaderBoardProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B71659813CDF030007C7B4C /* TiGamekitLeaderBoardProxy.m */; };
+		7B71659F13CDF030007C7B4C /* TiGamekitPeerProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B71659913CDF030007C7B4C /* TiGamekitPeerProxy.h */; };
+		7B7165A013CDF030007C7B4C /* TiGamekitPeerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B71659A13CDF030007C7B4C /* TiGamekitPeerProxy.m */; };
 		7BE0CBD0138C1D97000E8619 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE0CBCF138C1D97000E8619 /* Foundation.framework */; };
 		7BE0CBD2138C1D97000E8619 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE0CBD1138C1D97000E8619 /* GameKit.framework */; };
 		7BE0CBD8138C1DB0000E8619 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE0CBD7138C1DB0000E8619 /* CoreGraphics.framework */; };
 		7BE0CBDA138C1DB0000E8619 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE0CBD9138C1DB0000E8619 /* UIKit.framework */; };
-		7BE0CDE4138C8B56000E8619 /* TiGamekitLeaderBoardProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE0CDE2138C8B56000E8619 /* TiGamekitLeaderBoardProxy.h */; };
-		7BE0CDE5138C8B56000E8619 /* TiGamekitLeaderBoardProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0CDE3138C8B56000E8619 /* TiGamekitLeaderBoardProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* TiGamekit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiGamekit_Prefix.pch */; };
 /* End PBXBuildFile section */
 
@@ -55,16 +55,16 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		24DE9E0F11C5FE74003F90F6 /* TiGamekitModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiGamekitModuleAssets.h; path = Classes/TiGamekitModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* TiGamekitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiGamekitModuleAssets.m; path = Classes/TiGamekitModuleAssets.m; sourceTree = "<group>"; };
-		7B8261DD139D69AC00DB81D3 /* TiGamekitPeerProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiGamekitPeerProxy.h; sourceTree = "<group>"; };
-		7B8261DE139D69AC00DB81D3 /* TiGamekitPeerProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiGamekitPeerProxy.m; sourceTree = "<group>"; };
-		7B9A837E138D9F350048C116 /* TiGamekitAchievementsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiGamekitAchievementsProxy.h; sourceTree = "<group>"; };
-		7B9A837F138D9F350048C116 /* TiGamekitAchievementsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiGamekitAchievementsProxy.m; sourceTree = "<group>"; };
+		7B71659513CDF030007C7B4C /* TiGamekitAchievementsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiGamekitAchievementsProxy.h; path = Classes/TiGamekitAchievementsProxy.h; sourceTree = "<group>"; };
+		7B71659613CDF030007C7B4C /* TiGamekitAchievementsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiGamekitAchievementsProxy.m; path = Classes/TiGamekitAchievementsProxy.m; sourceTree = "<group>"; };
+		7B71659713CDF030007C7B4C /* TiGamekitLeaderBoardProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiGamekitLeaderBoardProxy.h; path = Classes/TiGamekitLeaderBoardProxy.h; sourceTree = "<group>"; };
+		7B71659813CDF030007C7B4C /* TiGamekitLeaderBoardProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiGamekitLeaderBoardProxy.m; path = Classes/TiGamekitLeaderBoardProxy.m; sourceTree = "<group>"; };
+		7B71659913CDF030007C7B4C /* TiGamekitPeerProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiGamekitPeerProxy.h; path = Classes/TiGamekitPeerProxy.h; sourceTree = "<group>"; };
+		7B71659A13CDF030007C7B4C /* TiGamekitPeerProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiGamekitPeerProxy.m; path = Classes/TiGamekitPeerProxy.m; sourceTree = "<group>"; };
 		7BE0CBCF138C1D97000E8619 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE0CBD1138C1D97000E8619 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		7BE0CBD7138C1DB0000E8619 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7BE0CBD9138C1DB0000E8619 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		7BE0CDE2138C8B56000E8619 /* TiGamekitLeaderBoardProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiGamekitLeaderBoardProxy.h; sourceTree = "<group>"; };
-		7BE0CDE3138C8B56000E8619 /* TiGamekitLeaderBoardProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiGamekitLeaderBoardProxy.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiGamekit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiGamekit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libTiGamekit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTiGamekit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,16 +117,16 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7B71659513CDF030007C7B4C /* TiGamekitAchievementsProxy.h */,
+				7B71659613CDF030007C7B4C /* TiGamekitAchievementsProxy.m */,
+				7B71659713CDF030007C7B4C /* TiGamekitLeaderBoardProxy.h */,
+				7B71659813CDF030007C7B4C /* TiGamekitLeaderBoardProxy.m */,
+				7B71659913CDF030007C7B4C /* TiGamekitPeerProxy.h */,
+				7B71659A13CDF030007C7B4C /* TiGamekitPeerProxy.m */,
 				24DE9E0F11C5FE74003F90F6 /* TiGamekitModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* TiGamekitModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* TiGamekitModule.h */,
 				24DD6CF81134B3F500162E58 /* TiGamekitModule.m */,
-				7BE0CDE2138C8B56000E8619 /* TiGamekitLeaderBoardProxy.h */,
-				7BE0CDE3138C8B56000E8619 /* TiGamekitLeaderBoardProxy.m */,
-				7B9A837E138D9F350048C116 /* TiGamekitAchievementsProxy.h */,
-				7B9A837F138D9F350048C116 /* TiGamekitAchievementsProxy.m */,
-				7B8261DD139D69AC00DB81D3 /* TiGamekitPeerProxy.h */,
-				7B8261DE139D69AC00DB81D3 /* TiGamekitPeerProxy.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 				AA747D9F0F9514B9006C5449 /* TiGamekit_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* TiGamekitModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* TiGamekitModuleAssets.h in Headers */,
-				7BE0CDE4138C8B56000E8619 /* TiGamekitLeaderBoardProxy.h in Headers */,
-				7B9A8380138D9F350048C116 /* TiGamekitAchievementsProxy.h in Headers */,
-				7B8261DF139D69AC00DB81D3 /* TiGamekitPeerProxy.h in Headers */,
+				7B71659B13CDF030007C7B4C /* TiGamekitAchievementsProxy.h in Headers */,
+				7B71659D13CDF030007C7B4C /* TiGamekitLeaderBoardProxy.h in Headers */,
+				7B71659F13CDF030007C7B4C /* TiGamekitPeerProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +225,9 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* TiGamekitModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiGamekitModuleAssets.m in Sources */,
-				7BE0CDE5138C8B56000E8619 /* TiGamekitLeaderBoardProxy.m in Sources */,
-				7B9A8381138D9F350048C116 /* TiGamekitAchievementsProxy.m in Sources */,
-				7B8261E0139D69AC00DB81D3 /* TiGamekitPeerProxy.m in Sources */,
+				7B71659C13CDF030007C7B4C /* TiGamekitAchievementsProxy.m in Sources */,
+				7B71659E13CDF030007C7B4C /* TiGamekitLeaderBoardProxy.m in Sources */,
+				7B7165A013CDF030007C7B4C /* TiGamekitPeerProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

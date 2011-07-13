@@ -23,4 +23,6 @@ BOOL isGameCenterAvailable();
 // isGameCenterAuthenticationComplete is set after authentication, and authenticateWithCompletionHandler's completionHandler block has been run. It is unset when the applicaiton is backgrounded. 
 @property (readwrite, getter=isGameCenterAuthenticationComplete) BOOL gameCenterAuthenticationComplete;
 
+BOOL isGameCenterAPIAvailable();
+-(BOOL) isPlayerAuthenticated;
 @end

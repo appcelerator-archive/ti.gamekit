@@ -272,8 +272,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
-									<integer>1</integer>
+									<integer>15</integer>
+									<integer>13</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -315,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TiGamekitPeerProxy.m</string>
+								<string>titanium.xcconfig</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,25 +323,24 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TiGamekitPeerProxy.m</string>
+										<string>titanium.xcconfig</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7BA7510513AF6DF500733B1E</string>
+										<string>7B7165A413CDF35F007C7B4C</string>
 										<key>history</key>
 										<array>
-											<string>7BE0CC23138C3116000E8619</string>
-											<string>7BE0CDE7138C8B6B000E8619</string>
 											<string>7B9A83CA138DF94F0048C116</string>
 											<string>7B826241139FE58000DB81D3</string>
-											<string>7B826242139FE58000DB81D3</string>
-											<string>7B76D10513A9008C00556C7B</string>
 											<string>7B76D10613A9008C00556C7B</string>
 											<string>7B76D10713A9008C00556C7B</string>
 											<string>7B76D10813A9008C00556C7B</string>
 											<string>7B76D10913A9008C00556C7B</string>
-											<string>7B76D10A13A9008C00556C7B</string>
-											<string>7B76D10C13A9008C00556C7B</string>
+											<string>7BFB9E1613C66D74004ADE65</string>
+											<string>7BFB9E1713C66D74004ADE65</string>
+											<string>7BFB9E1813C66D74004ADE65</string>
+											<string>7B7165A313CDF35F007C7B4C</string>
+											<string>7BFB9E1913C66D74004ADE65</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -399,9 +398,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>7BA7510613AF6DF500733B1E</string>
+				<string>7B71658D13CDE9B5007C7B4C</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>7BA7510713AF6DF500733B1E</string>
+				<string>7B71658E13CDE9B5007C7B4C</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -539,7 +538,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2AF069F1E9B00FABCE6</string>
 		<string>7BE0CBF2138C2781000E8619</string>
 		<string>/Users/clinttredway/Appcelerator/modules/payfor/titanium_mobile_modules/iphone/gamekit/gamkekit.xcodeproj</string>
 	</array>
@@ -621,7 +619,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>7BE0CBF2138C2781000E8619</string>
-				<string>7BA750CF13AF21BC00733B1E</string>
+				<string>7B71658F13CDE9B5007C7B4C</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

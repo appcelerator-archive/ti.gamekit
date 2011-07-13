@@ -30,14 +30,14 @@ typedef enum {
 @interface TiGamekitPeerProxy : TiProxy<GKPeerPickerControllerDelegate> {
 	GKSession *moduleSession;
 	NSString *otherPeerId;
+	NSString *sessionName;
 	int		gamePacketNumber;
 	ConnectionState	gameState;
-	BOOL *enableVoiceChat;
 }
 
 @property(nonatomic, retain) GKSession	 *moduleSession;
-@property(nonatomic) BOOL		 *enableVoiceChat;
 @property(nonatomic, copy)	 NSString	 *otherPeerId;
+@property(nonatomic,retain) NSString	 *sessionName;
 
 -(void)invalidateSession:(GKSession *)session;
 -(void)setupVoice;

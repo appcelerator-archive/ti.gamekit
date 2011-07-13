@@ -17,6 +17,7 @@
 
 @synthesize moduleSession;
 @synthesize otherPeerId;
+@synthesize sessionName;
 
 -(void)startPicker:(id)args {
 	ENSURE_UI_THREAD(startPicker,args);
@@ -55,7 +56,7 @@
 }
 
 - (GKSession *)peerPickerController:(GKPeerPickerController *)picker sessionForConnectionType:(GKPeerPickerConnectionType)type { 
-	GKSession *session = [[GKSession alloc] initWithSessionID:@"appcgk" displayName:nil sessionMode:GKSessionModePeer]; 
+	GKSession *session = [[GKSession alloc] initWithSessionID:[self sessionName] displayName:nil sessionMode:GKSessionModePeer]; 
 	return [session autorelease]; // peer picker retains a reference, so autorelease ours so we don't leak.
 }
 
@@ -345,5 +346,6 @@ void InterruptionListenerCallback (void *inUserData, UInt32 interruptionState)
 {
     return gameState == ConnectionStateConnected;
 }
+
 
 @end

@@ -3,8 +3,8 @@
 # during compilation, packaging, distribution, etc.
 #
 version: 1.0
-description: My module
-author: Clint Tredway
+description: Game Kit
+author: Appcelerator
 license: Appcelerator Commercial License
 copyright: Copyright (c) 2010-2011 by Appcelerator, Inc.
 
@@ -14,4 +14,4 @@ name: gamekit
 moduleid: ti.gamekit
 guid: 634adffb-5b75-45a8-ab28-a835219adbf4
 platform: iphone
-minsdk: 1.6.2
+minsdk: 1.6.0
