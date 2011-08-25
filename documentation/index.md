@@ -119,6 +119,13 @@ See the app.js file in the example directory
 
 </font>
 
+## Author
+
+Clint Tredway
+
+## Feedback and Support
+
+Please direct all questions, feedback, and concerns to [info@appcelerator.com](mailto:info@appcelerator.com?subject=iOS%20Gamekit%20Module).
 
 ## License
 
