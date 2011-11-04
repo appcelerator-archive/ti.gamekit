@@ -123,6 +123,10 @@ See the app.js file in the example directory
 
 Clint Tredway
 
+## Module History
+
+View the [change log](changelog.html) for this module.
+
 ## Feedback and Support
 
 Please direct all questions, feedback, and concerns to [info@appcelerator.com](mailto:info@appcelerator.com?subject=iOS%20Gamekit%20Module).
