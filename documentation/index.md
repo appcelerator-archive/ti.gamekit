@@ -5,6 +5,11 @@
 
 This is a module that integrates Apple's Game Kit API. Currently Leader Boards and Achievements are supported.
 
+## Getting Started
+
+View the [Configuring Apps to Use Modules](https://wiki.appcelerator.org/display/guides/Configuring+Apps+to+Use+Modules) page for instructions on getting
+started with using this module in your application.
+
 ## Accessing the gamekit Module
 
 To access this module from JavaScript, you would do the following:
