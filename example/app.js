@@ -24,7 +24,7 @@ window.open();
 
 var GameKit = require('ti.gamekit');
 
-GameKit.addEventListener('loggedin', function () {
+GameKit.addEventListener('loggedIn', function () {
 
     var gk = GameKit.createLeaderBoard('com.custeng.leaders');
     var gk_ach = GameKit.createAchievements();
@@ -110,7 +110,7 @@ GameKit.addEventListener('loggedin', function () {
         alert('Disconnected');
     });
 
-    gk_peer.addEventListener('dataRecieved', function (e) {
+    gk_peer.addEventListener('dataReceived', function (e) {
         alert(e.message);
     });
 

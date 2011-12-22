@@ -21,7 +21,6 @@
 	{
 		//earnedAchievementCache= NULL;
 	}
-	NSLog(@"LEADER BOARD INIT");
 	return self;
 }
 
@@ -34,16 +33,26 @@
 	if (leaderboardController != NULL) 
 	{
 		self.currentLeaderBoard = [args objectAtIndex:0];
-		
-		NSLog(@"creating score board:");
-		//NSLog([args objectAtIndex:0]);
+				
 		leaderboardController.category = [args objectAtIndex:0];
 		leaderboardController.timeScope = GKLeaderboardTimeScopeAllTime;
 		leaderboardController.leaderboardDelegate = self;
 		[[TiApp app] showModalController:leaderboardController animated:YES];
-		//[self presentModalViewController: leaderboardController animated: YES];
 	}
 	
+}
+
+- (void) reloadHighScoresForCategory
+{
+	GKLeaderboard* leaderBoard= [[[GKLeaderboard alloc] init] autorelease];
+	leaderBoard.category= self.currentLeaderBoard;
+	leaderBoard.timeScope= GKLeaderboardTimeScopeAllTime;
+	leaderBoard.range= NSMakeRange(1, 1);
+	
+	[leaderBoard loadScoresWithCompletionHandler:  ^(NSArray *scores, NSError *error)
+	 {
+         [self fireEvent:@"scoreSubmitted"];
+	 }]; 
 }
 
 - (void) reportScore:(id)args 
@@ -54,26 +63,15 @@
 	scoreReporter.value = [TiUtils intValue:[args objectAtIndex:0]];
 	[scoreReporter reportScoreWithCompletionHandler: ^(NSError *error) 
 	 {
-		 NSLog(@"score completed");
-		 [self fireEvent:@"scoreSubmitted"];
-		 //[self callDelegateOnMainThread: @selector(scoreReported:) withArg: NULL error: error];
-		 [self reloadHighScoresForCategory];
+         if (error == nil) {
+             [self reloadHighScoresForCategory];
+         }
+         else {
+             [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
+         }
 	 }];
 }
 
-- (void) reloadHighScoresForCategory
-{
-	NSLog(@"reload scores");
-	GKLeaderboard* leaderBoard= [[[GKLeaderboard alloc] init] autorelease];
-	leaderBoard.category= self.currentLeaderBoard;
-	leaderBoard.timeScope= GKLeaderboardTimeScopeAllTime;
-	leaderBoard.range= NSMakeRange(1, 1);
-	
-	[leaderBoard loadScoresWithCompletionHandler:  ^(NSArray *scores, NSError *error)
-	 {
-		 //[self callDelegateOnMainThread: @selector(reloadScoresComplete:error:) withArg: leaderBoard error: error];
-	 }]; 
-}
 
 -(void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)leaderboardController
 {

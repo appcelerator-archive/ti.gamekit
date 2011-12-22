@@ -167,7 +167,7 @@
 			
 			//NSLog(@"data packet: %@",incomingPacket);
 			NSDictionary* event = [NSDictionary dictionaryWithObjectsAndKeys:newStr,@"message",nil];
-			[self fireEvent:@"dataRecieved" withObject:event];
+			[self fireEvent:@"dataReceived" withObject:event];
 			//[newStr release];
 			//newStr = nil;
 			//[event release];

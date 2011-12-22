@@ -19,7 +19,7 @@
 	self = [super init];
 	if(self!= NULL)
 	{
-		earnedAchievementCache= NULL;
+		earnedAchievementCache = NULL;
 	}
 	return self;
 }
@@ -60,7 +60,7 @@
 			 else
 			 {
 				 //Something broke loading the achievement list.  Error out, and we'll try again the next time achievements submit.
-				 //[self callDelegateOnMainThread: @selector(achievementSubmitted:error:) withArg: NULL error: error];
+                 [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
 			 }
 			 
 		 }];
@@ -90,7 +90,13 @@
 			//Submit the Achievement...
 			[achievement reportAchievementWithCompletionHandler: ^(NSError *error)
 			 {
-				 [self callDelegateOnMainThread: @selector(achievementSubmitted:error:) withArg: achievement error: error];
+                 if (error == NULL) {
+                     [self fireEvent:(achievement.percentComplete < 100 ? @"progress" : @"earned")
+                          withObject:[NSDictionary dictionaryWithObject:achievement.identifier forKey:@"identifier"]];
+                 }
+                 else {
+                     [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
+                 }
 			 }];
 		}
 	}
@@ -101,7 +107,12 @@
 	self.earnedAchievementCache= NULL;
 	[GKAchievement resetAchievementsWithCompletionHandler: ^(NSError *error) 
 	 {
-		 //[self callDelegateOnMainThread: @selector(achievementResetResult:) withArg: NULL error: error];
+         if (error == NULL) {
+             [self fireEvent:@"reset"];
+         }
+         else {
+             [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
+         }
 	 }];
 }
 
