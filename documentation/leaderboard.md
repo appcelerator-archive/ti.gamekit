@@ -3,6 +3,9 @@
 ## Description
 Controls the GameKit LeaderBoard GUI.
 
+## Warning
+The LeaderBoard will not show anything until at least 2 users have reported scores for a particular identifier.
+
 ## Methods
 
 ### void showLeaderBoard(string identifier)
