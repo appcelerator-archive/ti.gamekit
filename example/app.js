@@ -26,20 +26,27 @@ var GameKit = require('ti.gamekit');
 
 GameKit.addEventListener('loggedIn', function () {
 
-    var gk = GameKit.createLeaderBoard('com.custeng.leaders');
+    var gk = GameKit.createLeaderBoard();
     var gk_ach = GameKit.createAchievements();
     var gk_peer = GameKit.createPeer();
     //this needs to be set for the peer to peer picker to find other peers
     gk_peer.sessionName = "myapp";
-
     //alert(gk_peer.sessionName);
+
+    gk.addEventListener('error', function (evt) {
+        alert(evt);
+    });
+    
+    gk.addEventListener('scoreSubmitted', function (evt) {
+        alert('Scored Reported!');
+    });
 
     lb_btn.enabled = true;
 
     var isConnected = false;
 
     lb_btn.addEventListener('click', function () {
-        gk.showLeaderBoard();
+        gk.showLeaderBoard('com.custeng.leaders');
     });
 
     window.add(lb_btn);

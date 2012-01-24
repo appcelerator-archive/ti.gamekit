@@ -37,6 +37,14 @@
 
 - (void) submitAchievement:(id)args //(NSString*) identifier percentComplete: (double) percentComplete
 {
+    NSString* category;
+    NSNumber* rawScore;
+    
+    ENSURE_ARG_AT_INDEX(category, args, 0, NSString);
+    ENSURE_ARG_AT_INDEX(rawScore, args, 1, NSNumber);
+    
+    double score = [TiUtils doubleValue:rawScore];
+    
 	//GameCenter check for duplicate achievements when the achievement is submitted, but if you only want to report 
 	// new achievements to the user, then you need to check if it's been earned 
 	// before you submit.  Otherwise you'll end up with a race condition between loadAchievementsWithCompletionHandler
@@ -68,20 +76,20 @@
 	else
 	{
 		//Search the list for the ID we're using...
-		GKAchievement* achievement= [self.earnedAchievementCache objectForKey: [TiUtils stringValue:[args objectAtIndex:0]]];
+		GKAchievement* achievement= [self.earnedAchievementCache objectForKey: category];
 		if(achievement != NULL)
 		{
-			if((achievement.percentComplete >= 100.0) || (achievement.percentComplete >= [TiUtils doubleValue:[args objectAtIndex:1]]))
+			if((achievement.percentComplete >= 100.0) || (achievement.percentComplete >= score))
 			{
 				//Achievement has already been earned so we're done.
 				achievement= NULL;
 			}
-			achievement.percentComplete= [TiUtils doubleValue:[args objectAtIndex:1]];
+			achievement.percentComplete= score;
 		}
 		else
 		{
-			achievement= [[[GKAchievement alloc] initWithIdentifier: [TiUtils stringValue:[args objectAtIndex:0]]] autorelease];
-			achievement.percentComplete= [TiUtils doubleValue:[args objectAtIndex:1]];
+			achievement= [[[GKAchievement alloc] initWithIdentifier: category] autorelease];
+			achievement.percentComplete= score;
 			//Add achievement to achievement cache...
 			[self.earnedAchievementCache setObject: achievement forKey: achievement.identifier];
 		}
