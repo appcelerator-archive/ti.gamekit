@@ -1,5 +1,10 @@
 # Change Log
 <pre>
+v1.2	Updated documentation to warn about the LeaderBoard only displaying with 2 or more reported scores. [MOD-366]
+		Fixed the example to properly call showLeaderBoard(identifier). It was missing the identifier. [MOD-366]
+		Added an alert to the example to exclaim when a score has finished reporting.
+		Added better validation to LeaderBoard and Achievements. [MOD-366]
+
 v1.1	Updated documentation for greater clarity and consistency with other Titanium modules.
 		Fixed achievements. [MOD-327]
 		Added the "isAvailable()" method to the module.

@@ -28,7 +28,7 @@ To access this module from JavaScript, you would do the following:
 ### bool isAvailable()
 Checks if GameKit is available on the current device. Devices must be running iOS 4.1 or later.
 
-### [Ti.GameKit.LeaderBoard][] createLeaderBoard(string identifier)
+### [Ti.GameKit.LeaderBoard][] createLeaderBoard()
 Creates a LeaderBoard GUI to display to your users.
 
 Takes the following arguments:

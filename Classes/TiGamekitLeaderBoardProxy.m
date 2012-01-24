@@ -25,31 +25,31 @@
 }
 
 
--(void)showLeaderBoard:(id)args
+-(void)showLeaderBoard:(id)arg
 {
-	ENSURE_UI_THREAD(showLeaderBoard,args);
+    ENSURE_SINGLE_ARG(arg, NSString);
+	ENSURE_UI_THREAD(showLeaderBoard,arg);
 	
 	GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
 	if (leaderboardController != NULL) 
 	{
-		self.currentLeaderBoard = [args objectAtIndex:0];
+		self.currentLeaderBoard = arg;
 				
-		leaderboardController.category = [args objectAtIndex:0];
+		leaderboardController.category = arg;
 		leaderboardController.timeScope = GKLeaderboardTimeScopeAllTime;
 		leaderboardController.leaderboardDelegate = self;
 		[[TiApp app] showModalController:leaderboardController animated:YES];
 	}
-	
 }
 
 - (void) reloadHighScoresForCategory
 {
 	GKLeaderboard* leaderBoard= [[[GKLeaderboard alloc] init] autorelease];
-	leaderBoard.category= self.currentLeaderBoard;
-	leaderBoard.timeScope= GKLeaderboardTimeScopeAllTime;
-	leaderBoard.range= NSMakeRange(1, 1);
+	leaderBoard.category = self.currentLeaderBoard;
+	leaderBoard.timeScope = GKLeaderboardTimeScopeAllTime;
+	leaderBoard.range = NSMakeRange(1, 1);
 	
-	[leaderBoard loadScoresWithCompletionHandler:  ^(NSArray *scores, NSError *error)
+	[leaderBoard loadScoresWithCompletionHandler: ^(NSArray *scores, NSError *error)
 	 {
          [self fireEvent:@"scoreSubmitted"];
 	 }]; 
@@ -57,16 +57,22 @@
 
 - (void) reportScore:(id)args 
 {
-	//****** REMEBER TO ADD CHECKS FOR SCORE DATA TYPE!!! ****///
-	//NSLog([TiUtils stringValue:[args objectAtIndex:0]]);
-	GKScore *scoreReporter = [[[GKScore alloc] initWithCategory:[TiUtils stringValue:[args objectAtIndex:1]]] autorelease];	
-	scoreReporter.value = [TiUtils intValue:[args objectAtIndex:0]];
+    NSString* category;
+    NSNumber* score;
+    
+    ENSURE_ARG_AT_INDEX(category, args, 0, NSString);
+    ENSURE_ARG_AT_INDEX(score, args, 1, NSNumber);
+    
+	GKScore *scoreReporter = [[[GKScore alloc] initWithCategory:category] autorelease];	
+	scoreReporter.value = [TiUtils intValue:score];
 	[scoreReporter reportScoreWithCompletionHandler: ^(NSError *error) 
 	 {
          if (error == nil) {
              [self reloadHighScoresForCategory];
+             NSLog(@"[INFO] Score Reported!");
          }
          else {
+             NSLog(@"[ERROR] Score not reported due to an error: %@", error);
              [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
          }
 	 }];
