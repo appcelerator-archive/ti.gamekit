@@ -54,7 +54,7 @@ GameKit.addEventListener('loggedIn', function () {
     rptScore_btn.addEventListener('click', function () {
         var score = 5;
         var category = 'com.custeng.leaders';
-        gk.reportScore(score, category);
+        gk.reportScore(category, score);
     });
 
     window.add(rptScore_btn);

@@ -15,13 +15,13 @@ Accepts a single argument:
 
 * string identifier: The identifier for the LeaderBoard, as set up in your iTunesConnect for this app.
 
-### reportScore(int score, string identifier)
+### reportScore(string identifier, int score)
 Saves a score for the current user to the specified LeaderBoard
                                                                
 Accepts two arguments:
 
-* int score: The score the user accomplished.
 * string identifier: The identifier for the LeaderBoard, as set up in your iTunesConnect for this app.
+* int score: The score the user accomplished.
 
 ## Events
 

@@ -1,5 +1,7 @@
 # Change Log
 <pre>
+v1.3	Fixed reportScore's documentation and example to properly use its arguments (should be category, then score). [MOD-438]
+
 v1.2	Updated documentation to warn about the LeaderBoard only displaying with 2 or more reported scores. [MOD-366]
 		Fixed the example to properly call showLeaderBoard(identifier). It was missing the identifier. [MOD-366]
 		Added an alert to the example to exclaim when a score has finished reporting.
