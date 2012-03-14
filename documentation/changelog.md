@@ -1,5 +1,7 @@
 # Change Log
 <pre>
+v1.4	Fixed a bug that prevented several of the "error" events from firing while interacting with achievements or the leaderboard. [MOD-533] 
+
 v1.3	Fixed reportScore's documentation and example to properly use its arguments (should be category, then score). [MOD-438]
 
 v1.2	Updated documentation to warn about the LeaderBoard only displaying with 2 or more reported scores. [MOD-366]

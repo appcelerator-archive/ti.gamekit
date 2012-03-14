@@ -43,4 +43,4 @@ Fired when a server interaction fails.
                                                                                                                   
 Receives a dictionary with the following key:
 
-* NSError error: The encountered error.
+* string error: The encountered error.

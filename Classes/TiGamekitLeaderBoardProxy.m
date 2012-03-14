@@ -73,7 +73,7 @@
          }
          else {
              NSLog(@"[ERROR] Score not reported due to an error: %@", error);
-             [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
+             [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:[error localizedDescription] forKey:@"error"]];
          }
 	 }];
 }

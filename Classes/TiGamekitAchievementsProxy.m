@@ -68,7 +68,7 @@
 			 else
 			 {
 				 //Something broke loading the achievement list.  Error out, and we'll try again the next time achievements submit.
-                 [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
+                 [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:[error localizedDescription] forKey:@"error"]];
 			 }
 			 
 		 }];
@@ -103,7 +103,7 @@
                           withObject:[NSDictionary dictionaryWithObject:achievement.identifier forKey:@"identifier"]];
                  }
                  else {
-                     [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
+                     [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:[error localizedDescription] forKey:@"error"]];
                  }
 			 }];
 		}
@@ -119,7 +119,7 @@
              [self fireEvent:@"reset"];
          }
          else {
-             [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:error forKey:@"error"]];
+             [self fireEvent:@"error" withObject:[NSDictionary dictionaryWithObject:[error localizedDescription] forKey:@"error"]];
          }
 	 }];
 }
