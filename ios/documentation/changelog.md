@@ -1,6 +1,6 @@
 # Change Log
 <pre>
-v1.5.0  Updated module to 64-bit architecture
+v1.5.0  Updated module to support 64-bit [TIMOB-18092]
 
 v1.4	Fixed a bug that prevented several of the "error" events from firing while interacting with achievements or the leaderboard. [MOD-533] 
 

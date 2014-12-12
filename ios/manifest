@@ -3,7 +3,7 @@
 # during compilation, packaging, distribution, etc.
 #
 version: 1.5.0
-architectures: armeabi armeabi-v7a x86
+architectures: armv7 i386 x86_64 arm64
 description: Game Kit
 author: Appcelerator
 license: Appcelerator Commercial License
@@ -15,4 +15,4 @@ name: gamekit
 moduleid: ti.gamekit
 guid: 634adffb-5b75-45a8-ab28-a835219adbf4
 platform: iphone
-minsdk: 3.4.1
+minsdk: 3.4.1.GA
