@@ -2,7 +2,8 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.4
+version: 1.5.0
+architectures: armv7 i386 x86_64 arm64
 description: Game Kit
 author: Appcelerator
 license: Appcelerator Commercial License
@@ -14,4 +15,4 @@ name: gamekit
 moduleid: ti.gamekit
 guid: 634adffb-5b75-45a8-ab28-a835219adbf4
 platform: iphone
-minsdk: 2.1.3.GA
+minsdk: 3.4.1.GA
